@@ -9,10 +9,10 @@ font pango:DejaVu Sans Mono 7
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
+set $up i
 set $down k
 set $left j
-set $right semicolon
+set $right l
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -116,6 +116,9 @@ bindsym Mod4+Shift+8 move container to workspace $workspace8
 bindsym Mod4+Shift+9 move container to workspace $workspace9
 bindsym Mod4+Shift+0 move container to workspace $workspace10
 
+#dudulala
+bindsym --whole-window Mod4+Control+Left workspace prev
+bindsym --whole-window Mod4+Control+Right workspace next
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -252,3 +255,5 @@ bindsym Mod4+Shift+f workspace $workspace1; exec firefox
 #screenshoot
 bindsym Print exec "scrot -m '/home/dzub/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 
+#gesture
+exec_always libinput-gestures-setup start
